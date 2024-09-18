@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".user_details.ResultActivity">
+
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/transparent_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/redington_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/quantom_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_overlay"
+        app:layout_constraintHeight_percent="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/hp_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintWidth_percent="0.19" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/greatvibes_regular"
+        android:text="@string/welcome"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_overlay"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toTopOf="@id/view_overlay"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Neha Puri Sharma"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/line_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/txtUserName"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TextView
+        android:id="@+id/txtDesignation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Channel Business Development, Lead Services"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewLine1" />
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/line_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/txtDesignation"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TextView
+        android:id="@+id/txtCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="HP India"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewLine2" />
+
+
+    <TextView
+        android:id="@+id/btnBackToScan"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Scan Again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <TextView
+        android:id="@+id/btnJoinConference"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Join Conference"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/btnBackToScan"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintWidth_percent="0.35" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

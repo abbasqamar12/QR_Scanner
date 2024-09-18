@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HP QR Scanner</string>
+    <string name="logo">Logo</string>
+    <string name="welcome">Welcome!</string>
+</resources>

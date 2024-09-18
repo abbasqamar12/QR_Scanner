@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".register.RegistrationActivity">
+
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/transparent_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/redington_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/quantom_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_overlay"
+        app:layout_constraintHeight_percent="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/hp_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintWidth_percent="0.19" />
+
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Registration Now!"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/profile_placeholder"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/txtRegister" />
+
+    <ImageView
+        android:id="@+id/captureImage"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/circular_bg"
+        android:padding="5dp"
+        android:src="@drawable/add_a_photo"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage"
+        app:layout_constraintEnd_toEndOf="@id/profileImage" />
+
+    <View
+        android:id="@+id/viewName"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtNameHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="15dp"
+        android:text="Full Name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewName"
+        app:layout_constraintStart_toStartOf="@id/viewName"
+        app:layout_constraintTop_toTopOf="@id/viewName" />
+
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+        android:fontFamily="@font/poppins_regular"
+        android:imeOptions="actionNext"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewName"
+        app:layout_constraintEnd_toEndOf="@id/viewName"
+        app:layout_constraintStart_toEndOf="@id/txtNameHead"
+        app:layout_constraintTop_toTopOf="@id/viewName" />
+
+
+    <View
+        android:id="@+id/viewCompany"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewName"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtCompanyHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="15dp"
+        android:text="Company Name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewCompany"
+        app:layout_constraintStart_toStartOf="@id/viewCompany"
+        app:layout_constraintTop_toTopOf="@id/viewCompany" />
+
+    <EditText
+        android:id="@+id/edtCompanyName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewCompany"
+        app:layout_constraintEnd_toEndOf="@id/viewCompany"
+        app:layout_constraintStart_toEndOf="@id/txtCompanyHead"
+        app:layout_constraintTop_toTopOf="@id/viewCompany" />
+
+
+    <View
+        android:id="@+id/viewDesignation"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewCompany"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtDesignationHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="15dp"
+        android:text="Designation"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewDesignation"
+        app:layout_constraintStart_toStartOf="@id/viewDesignation"
+        app:layout_constraintTop_toTopOf="@id/viewDesignation" />
+
+    <EditText
+        android:id="@+id/edtDesignation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewDesignation"
+        app:layout_constraintEnd_toEndOf="@id/viewDesignation"
+        app:layout_constraintStart_toEndOf="@id/txtDesignationHead"
+        app:layout_constraintTop_toTopOf="@id/viewDesignation" />
+
+
+    <View
+        android:id="@+id/viewEmail"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewDesignation"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtEmailHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="15dp"
+        android:text="Email"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewEmail"
+        app:layout_constraintStart_toStartOf="@id/viewEmail"
+        app:layout_constraintTop_toTopOf="@id/viewEmail" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:imeOptions="actionDone"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewEmail"
+        app:layout_constraintEnd_toEndOf="@id/viewEmail"
+        app:layout_constraintStart_toEndOf="@id/txtEmailHead"
+        app:layout_constraintTop_toTopOf="@id/viewEmail" />
+
+
+    <View
+        android:id="@+id/viewCity"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewEmail"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtCityHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="15dp"
+        android:text="City"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewCity"
+        app:layout_constraintStart_toStartOf="@id/viewCity"
+        app:layout_constraintTop_toTopOf="@id/viewCity" />
+
+    <Spinner
+        android:id="@+id/spinnerCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewCity"
+        app:layout_constraintEnd_toEndOf="@id/viewCity"
+        app:layout_constraintStart_toEndOf="@id/txtEmailHead"
+        app:layout_constraintTop_toTopOf="@id/viewCity" />
+
+    <View
+        android:id="@+id/viewTimeSlot"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toBottomOf="@id/viewCity"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtTimeSlotHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingStart="15dp"
+        android:text="Time Slot"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewTimeSlot"
+        app:layout_constraintStart_toStartOf="@id/viewTimeSlot"
+        app:layout_constraintTop_toTopOf="@id/viewTimeSlot" />
+
+    <Spinner
+        android:id="@+id/spinnerTimeSlot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/viewTimeSlot"
+        app:layout_constraintEnd_toEndOf="@id/viewTimeSlot"
+        app:layout_constraintStart_toEndOf="@id/txtTimeSlotHead"
+        app:layout_constraintTop_toTopOf="@id/viewTimeSlot" />
+
+
+    <TextView
+        android:id="@+id/txtSubmit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Submit"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <ProgressBar
+        android:id="@+id/loaderRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/view_overlay"
+        app:layout_constraintEnd_toEndOf="@id/view_overlay"
+        app:layout_constraintStart_toStartOf="@id/view_overlay"
+        app:layout_constraintTop_toTopOf="@id/view_overlay"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
